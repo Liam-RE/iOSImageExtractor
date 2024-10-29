@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 import sqlite3
 import os
+import subprocess
 from shutil import copyfile
 import glob
 import datetime
@@ -80,19 +81,11 @@ def StopExtraction():
     global is_running
     is_running = False
 
-import tkinter as tk
-from tkinter import filedialog, messagebox
-import subprocess
-
-import subprocess
-from tkinter import messagebox
 
 def Notification(title, message):
-    # Assuming Notification is a custom function to show a message box
     messagebox.showinfo(title, message)
 
 def RuniTunes():
-    # Set the path to iTunes executable
     iTunesPath = r"C:\Program Files\iTunes\iTunes.exe"
 
     try:
@@ -109,11 +102,10 @@ def RuniTunes():
 root = tk.Tk()
 root.title("iOS Image Extractor")
 
-# Variables to hold file paths
 manifest_path = tk.StringVar()
 backup_path = tk.StringVar()
 output_path = tk.StringVar()
-root.resizable(False, False)  # (width, height)
+root.resizable(False, False) 
 
 # Create GUI elements
 tk.Label(root, text="Start iTunes:").grid(row=0, column=0, sticky="w", padx=5, pady=5)
@@ -122,13 +114,11 @@ tk.Button(root, text="Start", command=RuniTunes).grid(row=0, column=1, padx=12, 
 tk.Label(root, text="Output Directory:").grid(row=1, column=0, sticky="w", padx=5, pady=5)
 tk.Entry(root, textvariable=output_path, width=50).grid(row=1, column=1, padx=5, pady=5)
 tk.Button(root, text="Browse", command=SelectOutput).grid(row=1, column=2, padx=12, pady=12)
-button_width = 15  # Set a fixed width for both buttons
+button_width = 15 
 
-## Place the Start Extraction button in row 3, column 0
-tk.Button(root, text="Start Extraction", command=StartExtraction, bg="green").grid(row=3, column=1, padx=(10, 5), pady=10, sticky="ew")  # Add padding for spacing
 
-# Place the Stop Extraction button in the same row (row 3), column 1
-tk.Button(root, text="Stop Extraction", command=StopExtraction, bg="red").grid(row=4, column=1, padx=(10, 5), pady=10, sticky="ew")  # Add padding for spacing
+tk.Button(root, text="Start Extraction", command=StartExtraction, bg="green").grid(row=3, column=1, padx=(10, 5), pady=10, sticky="ew")  
+tk.Button(root, text="Stop Extraction", command=StopExtraction, bg="red").grid(row=4, column=1, padx=(10, 5), pady=10, sticky="ew")  
 
 # Run the GUI loop
 root.mainloop()
