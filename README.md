@@ -1,7 +1,7 @@
 
 # iOS Image Extractor
 
-iOS Image Extractor is a Windows-based GUI application built with Python and Tkinter, designed to simplify the process of extracting images and videos from an iOS device backup. This program locates and extracts image and video files (e.g., `.jpg`, `.heic`, `.png`, `.mov`, `.mp4`, and `.gif`) from the latest iTunes backup on your system.
+iOS Image Extractor is a Windows-based GUI application built with Python and Tkinter, designed to simplify the process of extracting images and videos from an iOS device backup. This program locates and extracts image and video files (e.g., `.jpg`, `.heic`, `.png`, `.mov`, `.mp4`, and `.gif`).
 
 ## Features
 
