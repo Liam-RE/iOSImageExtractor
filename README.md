@@ -25,7 +25,7 @@ Ensure you have the following installed:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Liam-RE/iPhoneImageExtractor
+   git clone https://github.com/Liam-RE/iOSImageExtractor
 ## Usage
 
 ### Extract Images:
